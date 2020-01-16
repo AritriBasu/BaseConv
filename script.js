@@ -9,11 +9,18 @@ function BaseCon()
         alert("Base should be between 2 and 36");
     if(tob<2 || tob>36)
         alert("Base should be between 2 and 36");
-    var res=parseInt(no,fromb).toString(tob);
-    if(res)
-        document.getElementById('out').value = parseInt(res);
+        
+        var res=parseInt(no,fromb).toString(tob);
+        console.log(no, fromb, tob, res);
+    var chk=parseInt(res,tob).toString(fromb);
+        console.log(parseInt(chk));
+    if(parseInt(chk)!=parseInt(no))
+        alert('Enter a valid number!!');
     else
-        alert("Please enter a valid number!!");
+        document.getElementById('out').value =(res);  
+
+    
+        
         
 }
 function clearAll() {
